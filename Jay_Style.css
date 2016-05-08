@@ -1,0 +1,106 @@
+body {
+	padding: 30px 110px;
+	font-family: Helvetica;
+	margin: 0 auto;
+}
+h1 {
+	text-align: center;
+	font-weight: 100;
+	font-variant: small-caps;
+	font-size: 60px;
+	color: #23A1F4;
+	letter-spacing: 0.2em;
+}
+h2 {
+	text-align: center;
+	font-weight: 400;
+	font-size: 30px;
+	font-variant: small-caps;
+	color: #6F808A;
+	letter-spacing: 0.3em;
+	padding-bottom: 50px;
+}
+img {
+	display: block;
+	margin: 0 auto;
+}
+ol {
+	padding-left: 3em;
+	line-height: 2;
+	margin-bottom: 30px;
+}
+.tip {
+	position: relative;
+	left: 50px;
+	font-size: 12px;
+	color: #D80746;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	padding: 25px;
+	height: 175px;
+	width: 175px;
+	border-radius: 50%;
+	box-shadow: 0 0 5em gold;
+	background-image: url(http://i.imgur.com/Y7serZf.jpg);
+}	
+.concepttitle {
+	font-size: 20px;
+	font-weight: 400;
+	color: #F68169;
+	padding-bottom: 20px;
+}
+.concepttext {
+	font-size: 14px;
+	font-weight: 100;
+	border: 1px solid #6F808A;
+	border-radius: 5px;
+	margin: 30px;
+	padding: 40px;
+	text-align: left;
+	color: #6F808A;
+}
+.example {
+	border: white dotted 1px;
+	background-color: #46B5FB;
+	margin: 10px;
+	font-family: monospace;
+	font-weight: lighter;
+	font-size: 12px;
+	color: white;
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.subconcepttitle {
+	font-size: 17px;
+	font-weight: 400;
+	color: #09DC8B;
+	padding-bottom: 10px;
+}
+.subconcepttext {
+	font-size: 13px;
+	font-weight: 100;
+	color: #6F808A;
+	text-align: left;
+	background-color: #F2F8FC;
+	border-radius: 5px;
+	margin: 30px;
+	padding: 30px;
+}
+#finaltip {
+	position: relative;
+	left: 50px;
+	font-size: 12px;
+	font-weight: 100;
+	color: white;
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	padding: 25px;
+	height: 175px;
+	width: 175px;
+	border-radius: 50%;
+	box-shadow: 0 0 5em red;
+	background-image: url(http://i.imgur.com/mIlVAv5.jpg);
+}

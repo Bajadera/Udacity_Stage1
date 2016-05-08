@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="Jay_Style.css">
+	<title>Jay's Stage 1 Project Website</title>
+</head>
+<body>
+	<h1 class="title">Creating a Webpage</h1>
+	<h2 class="subtitle">A Summary Guide for Stage 1</h2>
+	<div class="bigconcept">
+		<div class="concepttext">
+			<div class="concepttitle">Creating Visually Appealing Webpages</div>
+			<p>To create a webpage that looks visually striking, we would need to use at least two langauges, HTML and CSS.</p>
+			<p>HTML (Hypertext Markup Language) is used to define the structure and content of a webpage, and is the standard language used to create webpages.  HTML is what makes the web "web-like", because with it we can control what is seen on a webpage, what it looks like, as well as add content (such as images, videos, and documents) and links to other webpages.</p>
+			<p>CSS (Cascading Style Sheets) helps us style a webpage.  It is a language we use for choosing the appearance and formatting of our webpage; it allows us to easily control things like fonts, backgrounds, colors, borders, positions of elements, etc.</p>
+		</div>
+	</div>
+	<div class="bigconcept">
+		<div class="concepttext">
+			<div class="concepttitle">HTML Crash Course</div>
+			<p>When we code in HTML, we have to use a special syntax and follow specific rules so that our markup (code) can be converted to a webpage we desire.  To do this, we use tags -- the basic HTML commands.  When we think of HTML as a language, then we can think of tags as words. This is what a tag looks like:</p>
+			<div class="example">
+				&lt;...&gt;example&lt;/...&gt;
+			</div>
+			<p>The first set of brackets is the <em>opening tag</em>, and the second, with the forward slash "/", is the <em>closing tag</em>. We use tags to form elements, which are the actual content of our webpage. This is what an element looks like:</p>
+			<div class="example">
+				&lt;b&gt;text&lt;/b&gt;<br>
+				&lt;em&gt;text&lt;/em&gt;
+			</div>
+			<p>The first tag (the "b" tag), makes the text inside it appear <strong>bolded</strong>; the second ("em") makes the text inside it appear <em>italicized</em> on our webpage, as shown in this paragraph. Each of the two is an element.</p>
+			<p>Note that the green tag is an opening tag; the red tag is an ending tag. Between these two, we have content.</p>
+			<p>HTML tags can be nested -- one tag can be inside another. This is an example of a nested tag:</p>
+			<div class="example">
+				&lt;b&gt;this text is just bold &lt;em&gt; and this text is both bold and italicized&lt;/em&gt;&lt;/b&gt;
+			</div>
+			<p>The output with the nested tags above would look like this:<br><b>this text is just bold<em> and this text is both bold and italicized</em></b></p>
+			<div class="tip">
+				<strong>TIP</strong><br>Do not forget to close a tag! Everthing following the opening tag is part of that tag.
+			</div>
+			<p>A more complex tag includes attributes and values, and linking to other webpages or incorporaring images into our webpage are examples. Consider the following example:</p>
+			<div class="example">
+				&lt;img src="www.webpage.com/image.jpg"&gt;
+			</div>
+			<p>The <strong>value</strong> is the link to the page. The <strong>attribute</strong> is "src". Also note that in this example no closing tag is needed, because the image tag is an example of a <strong>void tag</strong>.</p>
+			<p>Another example:</p>
+			<div class="example">
+				&lt;a href="www.webpage.com"&gt;Link to another webpage&lt;/a&gt;
+			</div>
+			<p>This tag links another webpage to our page, and the text "Link to another webpage" will appear as a clickable link to that webpage.</p>
+			<p>Here are a couple of resources you can use to learn more about HTML tags and coding in HTML:</p>
+				<ul>
+					<li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML">Mozilla Foundation HTML Reference</a></li>
+					<li><a href="http://www.w3schools.com/html/default.asp">W3Schools.com HTML Tutorial</a></li>
+				</ul>
+			<div class="tip">
+				<strong>TIP</strong><br>We can write comments in HTML that the computer won't "read":<br>&lt;!-- This is a comment! --&gt;
+			</div>
+			<div class="tip">
+				<strong>TIP</strong><br>A great tool for testing our "code-in-progress" is <a href="http://scratchpad.io/gruesome-mouth-1877">Scratchpad</a>, because the results of our code are instantly visible. 
+			</div>
+			<div class="tip">
+				<strong>TIP</strong><br>Another great tool for coding is <a href="http://codepen.io">Codepen</a>, which offers more advanced functions and near-instant rendering of our HTML code.
+			</div>
+		</div>
+	</div>
+	<div class="bigconcept">
+		<div class="concepttext">
+			<div class="concepttitle">CSS Crash Course</div>
+			<p>With CSS, we can define the styles for our webpage.  We can establish a style for a single element, every element of a specific type, or a group of identical elements that we have marked.</p>
+			<div class="subconcept">
+				<div class="subconcepttext">
+					<div class="subconcepttitle">Incorporating a Style</div>
+					<p>To use a CSS style, we need to somehow incorporate it into our HTML code. There are three ways of doing so:</p>
+						<ol>
+							<li>In our HTML, we add a link to a separate file that contains our CSS code. Example:
+							<div class="example">
+								&lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
+							</div>
+							Here, we are linking to a document (file) named style.css.
+							</li>
+							<li>We include a stylesheet in our HTML directly (this is typically done in the &lt;head&gt; element. Example:<br>
+							<div class="example">
+								&lt;style&gt;div {color:blue}&lt;/style&gt;
+							</div>
+							</li>
+							<li>We include an inline style directly in the HTML elements. Example:
+							<div class="example">
+								&lt;div style="color:blue"&gt;this text would be blue&lt;/div&gt;
+							</div>
+							</li>
+						</ol>
+					<p>How we set up a style matters; in the above order, each successive selection overrides the preceding style definition -- in other words, a style defined in a linked CSS file overrides the default browser style, whereas a stylesheet directly in our HTML code overrides the style defined in a linked CSS file, and an inline style in the element, in turn, overrides a stylesheet embedded in HTML.</p>
+					<div class="tip">
+						<strong>TIP</strong><br>Inline CSS as shown above is not recommended as our standard approach to adding style, because if we wanted to make a quick change to our style on the entire webpage, we would have to individually edit each element where we defined a style.
+					</div>
+				</div>
+			</div>
+			<div class="subconcept">
+				<div class="subconcepttext">
+					<div class="subconcepttitle">Writing CSS Code</div>
+					<p>To set a style for all elements of a particular type, we simply establish a style in our CSS code that applies to all elements of the type. We simply reference the HTML tag.</p>
+					<div class="example">
+						body {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-family: Helvetica<br>}
+					</div>
+					<p>	In the above example, everything that appears in the body of our webpage will use the font "Helvetica."</p>
+					<p>To set a style for elements that we have specified, we use a <strong>class</strong>. A class is a kind of a grouping of elements that is assigned a style of our choosing.</p>
+					<div class="example">
+						.lesson {<br>&nbsp;&nbsp;&nbsp;&nbsp;font-size: 30px;<br>&nbsp;&nbsp;&nbsp;&nbsp;color: #294860;<br>}
+					</div>
+					<p>In the above example, the class "lesson" (which is defined in our HTML) will use a font size of 30 pixels, and the specific color we've defined in hex.</p>
+					<p>To set a style for a specific, single element, we use the <strong>id</strong> selector -- in other words, we assign a unique marker to just that particular element we want to change, and then write CSS code to change it.</p>
+					<div class="example">
+						#special {<br>&nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br>&nbsp;&nbsp;&nbsp;&nbsp;color: red;<br>}
+					</div>
+					<p>	In this example, the id "special" (which is defined - or, we can say, assigned to a particular element - in our HTML) will align the text in the center and use red color.</p>
+					<p>There are many things we can change about our webpage's appearance using CSS. These webpages are good references to have when defining CSS styles:</p>
+						<ul>
+							<li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">Mozilla Foundation CSS Reference</a></li>
+							<li><a href="http://www.w3schools.com/css/default.asp">W3Schools.com CSS Tutorial</a></li>
+						</ul>
+					<div class="tip">
+						<strong>TIP</strong><br>We can write comments in CSS that the computer won't "read":<br>
+						/* this is a CSS comment */
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bigconcept">
+		<div class="concepttext">
+			<div class="concepttitle">Arranging Things On Our Website</div>
+			<p>By default, everything (all text, every element) we add to our webpage appears right next to the right of whatever came before it, without spacing inbetween. This means that we have to take steps to manage how we want our content to appear on the webpage.</p>
+			<p>A simple way to organize our webpage is by simply using tags to create <strong>whitespace</strong> -- an area of spacing between our elements so that our webpage does not appear disorganized or cluttered.</p>
+			<p>When writing text, we can start a new line using the BR tag. Example:</p>
+			<div class="example">
+				text text text &lt;br&gt;text text text &lt;br&gt;text text text
+			</div>
+			<p>In this example, the text output actually displays like this on our webpage:<br>
+				text text text<br>text text text<br>text text text
+			</p>	
+			<p>We can also organize text using the paragraph P tag; everything inside the tag will appear on our webpage as a distinct paragraph of text.</p>
+			<div class="example">
+				&lt;p&gt;text text text text text text text text text&lt;/p&gt;
+			</div>
+			<p>Another thing we can do is use "container" elements, such as <strong>div</strong> and <strong>span</strong>. These help us control how things are laid out on our webpage. Some HTML elements are inline while others are block -- what is means is that they behave differently on a webpage in terms of layout: whereas block elements form an invisible box around the things inside it, while an inline element has no such invisible border and takes only as much space as necessary.</p>
+			<p>Examples of inline elements:</p>
+			<div class="example">
+				&lt;a&gt;, &lt;span&gt;, &lt;br&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;b&gt;
+			</div>
+			<p>Examples of block elements:</p>
+			<div class="example">
+				&lt;p&gt;, &lt;div&gt;, &lt;form&gt;
+			</div>
+			<div class="subconcept">
+				<div class="subconcepttext">
+					<div class="subconcepttitle">Think Inside the Box</div>
+					<p>Picturing webpages as a collage of boxes makes it easier to understand and design them. When we conceptualize a design of a webpage, we can and <em>should</em> divide it using rectangular borders -- a practice called <strong>boxifying</strong>.
+					<img src="http://i.imgur.com/WC3YNwR.jpg" alt="Drawing boxes around elements." height="300" width="300">
+					<p>When we boxify, we get clues about what the different elements are that we will need to put on our webpage. So, working from our sketch, we start thinking about how the webpage will be coded and can begin outlining sections in our HTML.</p>
+					<div class="example">
+						&lt;html&gt;<br>
+						&lt;head&gt;<br>
+						&lt;/head&gt;<br>
+						&lt;body&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;h1&gt; &lt;/h1&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+						&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br>
+						&lt;/body&gt;<br>
+						&lt;/html&gt;
+					</div>
+					<p>In a way, we work backwards by putting together our code based on a conception of what our website should look like.</p>
+				</div>
+			</div>
+			<div class="subconcept">
+				<div class="subconcepttext">
+					<div class="subconcepttitle">Sizing and Arranging Content</div>
+					<p>Above, we made a case for thinking of all website content as boxes. To organize our webpage the way we want to, we will need to be mindful how we size and arrange these boxes.  The first thing that we will need to remember is that the width and height of our box does not equal the actual dimensions of the content itself -- there are also the margin, border, and padding to consider. This concept is well illustrated [LINK] here.</p>
+					<div class="tip">
+						<strong>TIP</strong><br>Actual element width =<br>left border + left padding + content + right padding + right border
+					</div>
+					<p>There's a way to automatically perform this calculation in CSS so that we do not have to worry about it:</p>
+					<div class="example">
+						*{<br>&nbsp;&nbsp;&nbsp;&nbsp;-webkit-box-sizing: border-box;<br>&nbsp;&nbsp;&nbsp;&nbsp;-moz-box-sizing: border-box<br>&nbsp;&nbsp;&nbsp;&nbsp;-ms-box-sizing: border-box;<br>&nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br>}
+					</div>
+					<p>We can set box sizes in pixels or as a percentage (screen area); in the case of the former, size of our element is fixed irrespetive of the screen size on which it is displayed, and in the case of percentages, the output will self-adjust depending on the size of the screen (browser window size).</p>
+					<p>In CSS, there is a convenient way that allows us to place boxes next to one another -- it is called the <strong>Flex Box</strong>.
+					<div class="example">
+						.app {<br>&nbsp;&nbsp;&nbsp;&nbsp;display: -webkit-flex;<br>&nbsp;&nbsp;&nbsp;&nbsp;display: flex;<br>}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="finaltip">
+			<strong>ONE LAST TIP</strong><br>There are a lot of things to remember as a novice programmer! Instrad of trying to memorize all details, we should understand the big picture, and know how to navigate the web to find resources that explain the details.
+		</div>
+	</div>
+</body>
